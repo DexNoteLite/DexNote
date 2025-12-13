@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign Up - DexNote Lite</title>
     <link rel="stylesheet" href="signup.css">
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Supabase Config -->
+    <script src="supabase.js" defer></script>
+
+    <!-- Signup Logic -->
+    <script src="signup.js" defer></script>
+    <script src="redirect-if-auth.js" defer></script>
 </head>
 <body>
+
     <section class="signup-section">
         <div class="signup-card">
             <h2 class="signup-title">Create Your DexNote Account</h2>
@@ -25,6 +36,8 @@
             </form>
         </div>
     </section>
-    <a href = "index.html" class="back-link">x</a>
+
+    <a href="index.html" class="back-link">x</a>
+
 </body>
 </html>

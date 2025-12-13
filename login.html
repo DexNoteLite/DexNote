@@ -5,26 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign Up - DexNote Lite</title>
     <link rel="stylesheet" href="login.css">
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Supabase Config -->
+    <script src="supabase.js" defer></script>
+
+    <!-- Login Logic -->
+    <script src="login.js" defer></script>
+    <script src="redirect-if-auth.js" defer></script>
 </head>
 <body>
+
     <section class="login-section">
         <div class="login-card">
             <h2 class="login-title">Login to Your DexNote Account</h2>
 
             <form class="login-form">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" required>
-
                 <label for="email">Email Address</label>
                 <input type="email" id="email" required>
 
                 <label for="password">Password</label>
                 <input type="password" id="password" required>
 
-                <a href = "dashboard.html"><button type="submit" class="btn">Log In</button></a>
+                <button type="submit" class="btn">Log In</button>
             </form>
         </div>
     </section>
-    <a href = "index.html" class="back-link">x</a>
+
+    <a href="index.html" class="back-link">x</a>
+
 </body>
 </html>
