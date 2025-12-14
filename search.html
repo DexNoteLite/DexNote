@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Users - DexNote Lite</title>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js" defer></script>
+    <script src="auth-guard.js" defer></script>
+
+    <!-- Search logic -->
+    <script src="search.js" defer></script>
+
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <!-- Navbar (same everywhere) -->
+    <section class="navbar">
+        <div><a href="dashboard.html">Dashboard</a></div>
+        <div><a href="profile.html">Profile</a></div>
+        <div><a href="search.html">Search</a></div>
+        <div><a href="courses.html">Courses</a></div>
+        <div><a href="notes.html">Notes</a></div>
+        <div><a href="meet.html">Meetings</a></div>
+        <div><a href="chat.html">Chat</a></div>
+        <div class="logout">
+            <a href="index.html" id="logout-button">Log Out</a>
+        </div>
+    </section>
+
+    <!-- Search section -->
+    <section class="search-container">
+        <h2>Find Students</h2>
+
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search by username or name..."
+        >
+
+        <div id="search-results" class="results"></div>
+    </section>
+
+</body>
+</html>

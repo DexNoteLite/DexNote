@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile - DexNote Lite</title>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js" defer></script>
+    <script src="auth-guard.js" defer></script>
+
+    <!-- Profile logic -->
+    <script src="profile.js" defer></script>
+
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <section class="navbar">
+        <div class="dashboard"><a href="dashboard.html">Dashboard</a></div>
+        <div class="profile"><a href="profile.html">Profile</a></div>
+        <div class="courses"><a href="courses.html">Courses</a></div>
+        <div class="notes"><a href="notes.html">Notes</a></div>
+        <div class="meet"><a href="meet.html">Meetings</a></div>
+        <div class="Tasks"><a href="tasks.html">Tasks</a></div>
+        <div class="Files"><a href="files.html">Files</a></div>
+        <div class="Chat"><a href="chat.html">Chat</a></div>
+        <div class="search"><a href="search.html">Search</a></div>
+        <div class="logout">
+            <a href="index.html" id="logout-button">Log Out</a>
+        </div>
+    </section>
+
+    <!-- Profile content -->
+    <section class="profile-container">
+
+        <form class="profile-card">
+
+            <div class="avatar-section">
+                <img id="avatar" src="default-avatar.png" alt="Profile Picture">
+    
+                <label class="avatar-upload">
+                    Change Photo
+                    <input type="file" id="avatar-input" accept="image/*" hidden>
+                </label>
+            </div>
+
+
+            <h2 class="profile-title">My Profile</h2>
+
+            <div class="profile-item">
+                <span class="label">Full Name</span>
+                <span class="value" id="profile-name">Loading...</span>
+            </div>
+
+            <div class="profile-item">
+                <span class="label">Email</span>
+                <span class="value" id="profile-email">Loading...</span>
+            </div>
+
+            <div class="profile-item">
+                <label class="label" for="bio">Bio</label>  
+                <input type="text" id="bio" placeholder="Short bio">
+            </div>
+
+            <div class="profile-item">
+                <label class="label" for="about_me">About Me</label>
+                <textarea id="about_me" rows="5" placeholder="Write something about yourself..."></textarea>
+            </div>
+
+            <button type="submit" class="save-btn">
+                Save Profile
+            </button>
+
+        </form>
+
+    </section>
+
+    <script src="logout.js" defer></script>
+</body>
+</html>

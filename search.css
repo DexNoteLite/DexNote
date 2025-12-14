@@ -1,0 +1,39 @@
+.search-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.search-container h2 {
+    margin-bottom: 16px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.results {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.user-card {
+    background: #1f1f1f;
+    padding: 14px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-card a {
+    text-decoration: none;
+    color: #7aa2ff;
+}
