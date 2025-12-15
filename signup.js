@@ -7,10 +7,15 @@ form.addEventListener("submit", async (e) => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  // 1️⃣ Create auth user
-  const { data, error } = await supabase.auth.signUp({
+  const { error } = await supabase.auth.signUp({
     email,
     password,
+    options: {
+      data: {
+        full_name: fullName,
+        username: email.split("@")[0]
+      }
+    }
   });
 
   if (error) {
@@ -18,22 +23,5 @@ form.addEventListener("submit", async (e) => {
     return;
   }
 
-  const user = data.user;
-
-  // 2️⃣ Insert profile
-  const { error: profileError } = await supabase
-    .from("profiles")
-    .insert({
-      id: user.id,
-      full_name: fullName,
-      username: email.split("@")[0], // simple username
-    });
-
-  if (profileError) {
-    alert(profileError.message);
-    return;
-  }
-
-  // success
-  window.location.href = "dashboard.html";
+  alert("Check your email to verify your account.");
 });
